@@ -1,0 +1,497 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <meta name="description" content="Ioannis Tzachristas — PhD candidate at TUM. Research: LLM-based agents, privilege management, transportation systems, security & formal methods." />
+  <meta name="author" content="Ioannis Tzachristas" />
+  <meta property="og:title" content="Ioannis Tzachristas" />
+  <meta property="og:description" content="PhD candidate at TUM • LLM-based agents, security & formal methods • Transportation systems." />
+  <meta property="og:type" content="website" />
+  <title>Ioannis Tzachristas</title>
+
+  <style>
+    :root{
+      --bg:#0b0e14; --card:#111827; --muted:#93a4b8; --text:#e8eef7;
+      --brand:#7aa2ff; --brand2:#5eead4; --ring: rgba(122,162,255,.35);
+      --border: rgba(255,255,255,.08);
+      --shadow: 0 10px 30px rgba(0,0,0,.35);
+      --radius: 18px;
+      --mono: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
+      --sans: ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, "Apple Color Emoji","Segoe UI Emoji";
+    }
+    @media (prefers-color-scheme: light){
+      :root{
+        --bg:#f6f8fc; --card:#ffffff; --muted:#52657a; --text:#0b1220;
+        --brand:#2f5bff; --brand2:#0ea5a4; --ring: rgba(47,91,255,.22);
+        --border: rgba(2,6,23,.10);
+        --shadow: 0 10px 30px rgba(2,6,23,.10);
+      }
+    }
+    *{box-sizing:border-box}
+    html,body{margin:0; padding:0; font-family:var(--sans); background: radial-gradient(1200px 600px at 20% 10%, rgba(122,162,255,.12), transparent 55%),
+                                               radial-gradient(900px 500px at 90% 0%, rgba(94,234,212,.10), transparent 55%),
+                                               var(--bg);
+              color:var(--text);}
+    a{color:inherit; text-decoration:none}
+    a:hover{color:var(--brand)}
+    .wrap{max-width:1100px; margin:0 auto; padding:28px 18px 70px;}
+    .topbar{display:flex; align-items:center; justify-content:space-between; gap:12px; position:sticky; top:0; padding:12px 0; z-index:10;
+            backdrop-filter: blur(10px); background: linear-gradient(to bottom, rgba(0,0,0,.35), transparent);}
+    @media (prefers-color-scheme: light){
+      .topbar{background: linear-gradient(to bottom, rgba(246,248,252,.85), transparent);}
+    }
+    .brand{display:flex; align-items:center; gap:12px;}
+    .avatar{
+      width:42px; height:42px; border-radius:14px; overflow:hidden;
+      border:1px solid var(--border);
+      box-shadow: var(--shadow);
+      background: linear-gradient(135deg, rgba(122,162,255,.9), rgba(94,234,212,.9));
+      flex: 0 0 auto;
+    }
+    .avatar img{width:100%; height:100%; object-fit:cover; display:block}
+    .nav{display:flex; flex-wrap:wrap; gap:10px; justify-content:flex-end}
+    .pill{
+      font-size:13px; padding:8px 10px; border:1px solid var(--border); border-radius:999px;
+      background: rgba(255,255,255,.03);
+    }
+    .pill:hover{border-color:rgba(122,162,255,.35); box-shadow: 0 0 0 4px var(--ring)}
+    .hero{display:grid; grid-template-columns: 1.15fr .85fr; gap:16px; align-items:stretch; margin-top:12px;}
+    @media (max-width: 900px){ .hero{grid-template-columns:1fr;} }
+    .card{
+      background: linear-gradient(180deg, rgba(255,255,255,.06), rgba(255,255,255,.02));
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      padding:18px;
+      box-shadow: var(--shadow);
+    }
+    @media (prefers-color-scheme: light){
+      .card{background: linear-gradient(180deg, rgba(2,6,23,.03), rgba(2,6,23,.01));}
+    }
+    h1{margin:0 0 6px; font-size:38px; letter-spacing:-.6px; line-height:1.08}
+    .subtitle{color:var(--muted); font-size:15px; line-height:1.5}
+    .badges{display:flex; flex-wrap:wrap; gap:10px; margin-top:12px}
+    .badge{
+      font-size:13px; padding:8px 10px; border-radius:999px;
+      border:1px solid var(--border);
+      background: rgba(122,162,255,.08);
+    }
+    .badge.alt{background: rgba(94,234,212,.10);}
+    .cta{display:flex; gap:10px; flex-wrap:wrap; margin-top:14px}
+    .btn{
+      display:inline-flex; align-items:center; gap:8px;
+      padding:10px 12px; border-radius:12px;
+      border:1px solid rgba(122,162,255,.35);
+      background: rgba(122,162,255,.10);
+      font-size:14px;
+    }
+    .btn:hover{box-shadow: 0 0 0 4px var(--ring)}
+    .btn.secondary{
+      border-color: var(--border);
+      background: rgba(255,255,255,.03);
+    }
+    .grid{display:grid; grid-template-columns: 1fr 1fr; gap:16px; margin-top:16px;}
+    @media (max-width: 900px){ .grid{grid-template-columns:1fr;} }
+
+    h2{font-size:18px; margin:0 0 10px}
+    .section{margin-top:16px}
+    .item{padding:12px; border:1px solid var(--border); border-radius:14px; background: rgba(255,255,255,.02); margin-top:10px}
+    .item .top{display:flex; justify-content:space-between; gap:10px; flex-wrap:wrap}
+    .role{font-weight:700}
+    .meta{color:var(--muted); font-size:13px}
+    .bullets{margin:10px 0 0; padding-left:18px; color:var(--text)}
+    .bullets li{margin:6px 0; color:var(--muted); line-height:1.45}
+    .k{font-family:var(--mono); font-size:12px; color:var(--muted); border:1px solid var(--border);
+       padding:2px 7px; border-radius:999px; background: rgba(255,255,255,.02)}
+    .row{display:flex; gap:10px; flex-wrap:wrap; align-items:center}
+    .footer{margin-top:22px; color:var(--muted); font-size:13px; display:flex; justify-content:space-between; gap:10px; flex-wrap:wrap}
+    .tiny{font-size:12px; color:var(--muted)}
+    .sep{height:1px; background: var(--border); margin:14px 0}
+
+    /* Media gallery */
+    .gallery{display:grid; grid-template-columns: repeat(12, 1fr); gap:12px; margin-top:10px}
+    .gcard{border:1px solid var(--border); border-radius:16px; overflow:hidden; background: rgba(255,255,255,.02)}
+    .gcard img{width:100%; height:100%; object-fit:contain; display:block; background: rgba(0,0,0,.15)}
+    @media (prefers-color-scheme: light){
+      .gcard img{background: rgba(2,6,23,.04)}
+    }
+    .span-4{grid-column: span 4;}
+    .span-6{grid-column: span 6;}
+    .span-12{grid-column: span 12;}
+    @media (max-width: 900px){
+      .span-4,.span-6{grid-column: span 12;}
+    }
+    .cap{padding:10px 12px; font-size:13px; color:var(--muted); border-top:1px solid var(--border)}
+  </style>
+</head>
+
+<body>
+  <div class="wrap">
+    <header class="topbar">
+      <div class="brand">
+        <div class="avatar" aria-hidden="true">
+          <img src="assets/img/image1.jpeg" alt="Ioannis Tzachristas" />
+        </div>
+        <div>
+          <div style="font-weight:800; letter-spacing:-.2px;">Ioannis Tzachristas</div>
+          <div class="tiny">PhD candidate • TUM • Munich</div>
+        </div>
+      </div>
+      <nav class="nav" aria-label="Primary">
+        <a class="pill" href="#about">About</a>
+        <a class="pill" href="#personal">Personal</a>
+        <a class="pill" href="#education">Education</a>
+        <a class="pill" href="#experience">Experience</a>
+        <a class="pill" href="#research">Research</a>
+        <a class="pill" href="#media">Media</a>
+        <a class="pill" href="#contact">Contact</a>
+      </nav>
+    </header>
+
+    <main>
+      <section class="hero" id="about">
+        <div class="card">
+          <h1>Ioannis Tzachristas</h1>
+          <p class="subtitle">
+            PhD candidate at the Chair of Transportation Systems Engineering (TUM), collaborating with Huawei Munich Research Center.
+            I work on <b>privilege management for LLM-based AI agents</b> and applications in transportation systems, with broader interests in
+            agentic AI, security/formal methods, and discrete mathematics.
+          </p>
+
+          <div class="badges" aria-label="Highlights">
+            <span class="badge">LLM-based systems & agentic AI</span>
+            <span class="badge alt">Security • IAM • Formal methods</span>
+            <span class="badge">Transportation systems</span>
+            <span class="badge alt">Discrete mathematics</span>
+          </div>
+
+          <div class="cta">
+            <a class="btn" href="https://www.mos.ed.tum.de/en/vvs/mitarbeiterinnen/ioannis-tzachristas/" target="_blank" rel="noreferrer">
+              TUM academic page
+            </a>
+            <a class="btn secondary" href="https://youtu.be/13Zj6UqBi1E?si=AuAxrb-2Tfs9ipov" target="_blank" rel="noreferrer">
+              YouTube
+            </a>
+            <a class="btn secondary" href="https://scholar.google.com/citations?user=7p_28KEAAAAJ&hl=el&oi=ao" target="_blank" rel="noreferrer">
+              Google Scholar
+            </a>
+            <a class="btn secondary" href="https://orcid.org/0009-0007-0523-2889" target="_blank" rel="noreferrer">ORCID</a>
+            <a class="btn secondary" href="https://www.linkedin.com/in/ioannis-tzachristas-83a00522a/" target="_blank" rel="noreferrer">
+              LinkedIn
+            </a>
+          </div>
+
+          <div class="sep"></div>
+          <div class="row" aria-label="Quick facts">
+            <span class="k">Munich, Germany</span>
+            <span class="k">PhD (2024–present)</span>
+            <span class="k">MEng/MSc ECE NTUA (2019–2024)</span>
+          </div>
+        </div>
+
+        <aside class="card">
+          <h2>Now</h2>
+          <div class="item">
+            <div class="top">
+              <div class="role">PhD Candidate — TUM</div>
+              <div class="meta">09/2024 – present</div>
+            </div>
+            <div class="meta">Topic: Privilege Management of LLM-based AI-agents & Applications in Transportation Systems</div>
+          </div>
+
+          <div class="item">
+            <div class="top">
+              <div class="role">Researcher (Fixed-term PhD Contract) — Huawei Munich Research Center</div>
+              <div class="meta">09/2024 – present</div>
+            </div>
+            <div class="meta">Trustworthy Technology & Engineering Lab • Identity & Access Management</div>
+          </div>
+
+          <div class="item">
+            <div class="top">
+              <div class="role">Scholarships</div>
+            </div>
+            <ul class="bullets">
+              <li>“Athina” Stipendium (2024–25)</li>
+              <li>General Michael Arnaoutis Foundation Scholarship (2025–26)</li>
+              <li>Top PhD scholar — “AKTOR4TheFuture” (2025–26)</li>
+            </ul>
+          </div>
+        </aside>
+      </section>
+
+      <section class="card section" id="personal">
+        <h2>Personal information</h2>
+        <div class="row" style="margin-top:10px">
+          <span class="k">Full name: IOANNIS TZACHRISTAS</span>
+          <span class="k">Date of birth: 11.06.2001</span>
+          <span class="k">Birthplace: Ioannina, Epirus, Greece</span>
+        </div>
+        <div class="row" style="margin-top:10px">
+          <span class="k">Address: Riesstrasse 25, 80992, Munich, Bavaria, Germany</span>
+        </div>
+        <div class="row" style="margin-top:10px">
+          <span class="k">Telephone: +30 6980228092</span>
+          <span class="k">Telephone: +49 1707410323</span>
+        </div>
+        <div class="row" style="margin-top:10px">
+          <a class="pill" href="mailto:jtzach@gmail.com">jtzach@gmail.com</a>
+          <a class="pill" href="mailto:ioannis.tzachristas@huawei.com">ioannis.tzachristas@huawei.com</a>
+          <a class="pill" href="mailto:ioannis.tzachristas@tum.de">ioannis.tzachristas@tum.de</a>
+        </div>
+      </section>
+
+      <section class="grid">
+        <div class="card section" id="education">
+          <h2>Education</h2>
+
+          <div class="item">
+            <div class="top">
+              <div class="role">Technical University of Munich (TUM) — PhD Candidate</div>
+              <div class="meta">09/2024 – present</div>
+            </div>
+            <ul class="bullets">
+              <li>Chair of Transportation Systems Engineering, School of Engineering and Design</li>
+              <li>PhD topic: “Privilege Management of LLM-based AI-agents and Applications in Transportation Systems”</li>
+              <li>Supervised by Prof. Constantinos Antoniou • Co-supervised by Dr. Aifen Sui</li>
+            </ul>
+          </div>
+
+          <div class="item">
+            <div class="top">
+              <div class="role">National Technical University of Athens (NTUA) — MEng/MSc, Electrical & Computer Engineering</div>
+              <div class="meta">09/2019 – 07/2024</div>
+            </div>
+            <ul class="bullets">
+              <li>GPA: 9.02/10.00 • Thesis Grade: 10.00/10.00</li>
+              <li>Thesis: Creating an LLM-based AI-agent (methodology toward enhancing LLMs with APIs)</li>
+            </ul>
+          </div>
+
+          <div class="item">
+            <div class="top">
+              <div class="role">Zosimaia School (Ioannina) — General Lyceum</div>
+              <div class="meta">09/2016 – 06/2019</div>
+            </div>
+            <ul class="bullets">
+              <li>GPA: 20.0/20.0</li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="card section" id="experience">
+          <h2>Work experience</h2>
+
+          <div class="item">
+            <div class="top">
+              <div class="role">Huawei Munich Research Center — Identity & Access Management</div>
+              <div class="meta">09/2024 – present</div>
+            </div>
+            <ul class="bullets">
+              <li>Fixed-term PhD contract in Trustworthy Technology & Engineering Lab</li>
+              <li>Focus: security / IAM for LLM-based agentic systems</li>
+            </ul>
+          </div>
+
+          <div class="item">
+            <div class="top">
+              <div class="role">Huawei Shenzhen HQ — Theory Lab (Research Business Trip)</div>
+              <div class="meta">08/2025 – 09/2025</div>
+            </div>
+            <ul class="bullets">
+              <li>Topic: Mathematical theory of Top-k sparse attention via total variation distance</li>
+              <li>Collaboration with Shenzhen University</li>
+            </ul>
+          </div>
+
+          <div class="item">
+            <div class="top">
+              <div class="role">Huawei Munich Research Center — Master Student Contract</div>
+              <div class="meta">01/2024 – 08/2024</div>
+            </div>
+            <ul class="bullets">
+              <li>Thesis: Creating an LLM-based AI-agent (methodology toward enhancing LLMs with APIs)</li>
+            </ul>
+          </div>
+
+          <div class="item">
+            <div class="top">
+              <div class="role">Huawei Munich Research Center — Internship</div>
+              <div class="meta">07/2023 – 01/2024</div>
+            </div>
+            <ul class="bullets">
+              <li>Projects on formal methods for security (formal verification / model checking)</li>
+            </ul>
+          </div>
+        </div>
+      </section>
+
+      <section class="grid">
+        <div class="card section" id="research">
+          <h2>Selected publications & research</h2>
+
+          <div class="item">
+            <div class="top">
+              <div class="role">Guided Persona-based AI Surveys</div>
+              <div class="meta">hEART 2025 (TUM) — presented</div>
+            </div>
+            <div class="meta">Replicating personal mobility preferences at scale using LLMs</div>
+          </div>
+
+          <div class="item">
+            <div class="top">
+              <div class="role">Perses: Unlocking Privilege Escalation for Small LLMs via Extensible Heterogeneity</div>
+              <div class="meta">ACM ASIACCS 2025 — presented</div>
+            </div>
+          </div>
+
+          <div class="item">
+            <div class="top">
+              <div class="role">LLM-PDM: Persona-Driven mobility preferences at scale</div>
+              <div class="meta">Communications in Transportation Research — accepted</div>
+            </div>
+          </div>
+
+          <div class="item">
+            <div class="top">
+              <div class="role">NOEM3A</div>
+              <div class="meta">Neuro-symbolic ontology-enhanced multi-intent understanding in mobile agents</div>
+            </div>
+          </div>
+
+          <div class="item">
+            <div class="top">
+              <div class="role">A Mathematical Theory of Top-k Sparse Attention via Total Variation Distance</div>
+              <div class="meta">Research work</div>
+            </div>
+          </div>
+
+          <div class="item">
+            <div class="top">
+              <div class="role">Creating an LLM-based AI-agent: A high-level methodology</div>
+              <div class="meta">Research work</div>
+            </div>
+          </div>
+        </div>
+
+        <div class="card section">
+          <h2>Skills</h2>
+
+          <div class="item">
+            <div class="top">
+              <div class="role">Programming & tools</div>
+            </div>
+            <div class="row" style="margin-top:8px">
+              <span class="k">Python</span><span class="k">C++</span><span class="k">Matlab / Octave</span>
+              <span class="k">Z3</span><span class="k">NuSMV</span><span class="k">SPIN</span><span class="k">Maude</span>
+              <span class="k">Arduino</span><span class="k">LTspice</span><span class="k">GeoGebra</span>
+            </div>
+          </div>
+
+          <div class="item">
+            <div class="top">
+              <div class="role">Research interests</div>
+            </div>
+            <ul class="bullets">
+              <li>LLM-based systems & agentic AI</li>
+              <li>Cyber security (information security), privilege management, IAM</li>
+              <li>Formal methods (formal verification & model checking)</li>
+              <li>Transportation systems</li>
+              <li>Discrete mathematics (combinatorics, algorithms, graph theory, number theory, automata)</li>
+            </ul>
+          </div>
+
+          <div class="item">
+            <div class="top">
+              <div class="role">Languages</div>
+            </div>
+            <div class="row" style="margin-top:8px">
+              <span class="k">Greek</span>
+              <span class="k">English</span>
+              <span class="k">German (B1)</span>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="card section" id="media">
+        <h2>Media</h2>
+        <p class="subtitle" style="margin-top:0">
+          Images included from my CV.
+        </p>
+
+        <div class="gallery" aria-label="CV images">
+          <figure class="gcard span-6">
+            <img src="assets/img/image1.jpeg" alt="Photo" />
+            <figcaption class="cap">Photo</figcaption>
+          </figure>
+
+          <figure class="gcard span-6">
+            <img src="assets/img/image7.jpeg" alt="Sketch portrait" />
+            <figcaption class="cap">Sketch portrait</figcaption>
+          </figure>
+
+          <figure class="gcard span-4">
+            <img src="assets/img/image2.png" alt="TUM logo" />
+            <figcaption class="cap">TUM</figcaption>
+          </figure>
+
+          <figure class="gcard span-4">
+            <img src="assets/img/image4.png" alt="Huawei logo" />
+            <figcaption class="cap">Huawei</figcaption>
+          </figure>
+
+          <figure class="gcard span-4">
+            <img src="assets/img/image3.png" alt="NTUA emblem" />
+            <figcaption class="cap">NTUA</figcaption>
+          </figure>
+
+          <figure class="gcard span-12">
+            <img src="assets/img/image5.png" alt="IMC 2021 certificate" />
+            <figcaption class="cap">IMC 2021 — First Prize certificate</figcaption>
+          </figure>
+
+          <figure class="gcard span-6">
+            <img src="assets/img/image6.png" alt="AKTOR4TheFuture logo" />
+            <figcaption class="cap">AKTOR4TheFuture</figcaption>
+          </figure>
+
+          <figure class="gcard span-6">
+            <div style="padding:14px">
+              <div style="font-weight:700; margin-bottom:6px;">Video</div>
+              <div class="subtitle" style="margin:0 0 10px">YouTube link</div>
+              <a class="btn" href="https://youtu.be/13Zj6UqBi1E?si=AuAxrb-2Tfs9ipov" target="_blank" rel="noreferrer">Watch on YouTube</a>
+            </div>
+          </figure>
+        </div>
+      </section>
+
+      <section class="card section" id="contact">
+        <h2>Contact</h2>
+        <div class="row" style="margin-top:10px">
+          <a class="btn" href="mailto:jtzach@gmail.com">jtzach@gmail.com</a>
+          <a class="btn secondary" href="mailto:ioannis.tzachristas@huawei.com">ioannis.tzachristas@huawei.com</a>
+          <a class="btn secondary" href="mailto:ioannis.tzachristas@tum.de">ioannis.tzachristas@tum.de</a>
+        </div>
+
+        <div class="row" style="margin-top:10px">
+          <a class="pill" href="https://www.mos.ed.tum.de/en/vvs/mitarbeiterinnen/ioannis-tzachristas/" target="_blank" rel="noreferrer">TUM academic page</a>
+          <a class="pill" href="https://scholar.google.com/citations?user=7p_28KEAAAAJ&hl=el&oi=ao" target="_blank" rel="noreferrer">Google Scholar</a>
+          <a class="pill" href="https://orcid.org/0009-0007-0523-2889" target="_blank" rel="noreferrer">ORCID</a>
+          <a class="pill" href="https://www.linkedin.com/in/ioannis-tzachristas-83a00522a/" target="_blank" rel="noreferrer">LinkedIn</a>
+          <a class="pill" href="https://youtu.be/13Zj6UqBi1E?si=AuAxrb-2Tfs9ipov" target="_blank" rel="noreferrer">YouTube</a>
+        </div>
+      </section>
+
+      <footer class="footer">
+        <span>© <span id="y"></span> Ioannis Tzachristas</span>
+        <span class="tiny">GitHub Pages • single-file HTML</span>
+      </footer>
+    </main>
+  </div>
+
+  <script>
+    document.getElementById("y").textContent = new Date().getFullYear();
+  </script>
+</body>
+</html>
