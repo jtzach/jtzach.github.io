@@ -1,0 +1,113 @@
+{
+  "updated": "2026-11-08",
+  "scope": "Known gaps in the public-source collection. This is not an exhaustive inventory of every LinkedIn post, web mention or media file.",
+  "linkedin": {
+    "recovered_original_posts": 11,
+    "public_footer_post_count_observed": 23,
+    "count_note": "The public footer count is a discovery clue, not a verified export count. Private, deleted or unindexed material is outside the collected public sources.",
+    "constraint": "The complete activity listing was unavailable publicly; direct public profile requests returned HTTP 999 or an authentication wall. No login barrier was bypassed.",
+    "pending_posts": [
+      {
+        "id": "imc2026-unrecovered",
+        "title": "IMC 2026 team leadership",
+        "event_dates": "27 July–3 August 2026",
+        "status": "Indexed reference only; full original text and gallery are not saved.",
+        "original_post_url": null,
+        "discovery_source_url": "https://gr.linkedin.com/in/georgios-tzachristas-0a402b28b",
+        "related_links": [
+          "https://lnkd.in/d9TU5Nh4"
+        ]
+      },
+      {
+        "id": "sopot2026-unrecovered",
+        "title": "Huawei European Contest Talent Summit 2026",
+        "event_dates": "17–20 July 2026",
+        "status": "Indexed reference only; full original text and gallery are not saved.",
+        "original_post_url": null,
+        "discovery_source_url": "https://gr.linkedin.com/in/konstantinos-tzachristas-15a392a0",
+        "related_links": [
+          "https://lnkd.in/dHUzwZjs",
+          "https://lnkd.in/p/dFk5FVw3"
+        ]
+      },
+      {
+        "id": "marathon2025-unrecovered",
+        "title": "Munich Marathon 2025 — 10 km",
+        "event_dates": "12 October 2025",
+        "status": "Indexed reference only; full original text and gallery are not saved.",
+        "original_post_url": null,
+        "discovery_source_url": "https://nl.linkedin.com/in/konstantinos-prattis-b77829250",
+        "related_links": [
+          "https://lnkd.in/dKRhWFhK"
+        ]
+      },
+      {
+        "id": "graduation2025-unrecovered",
+        "title": "NTUA Class of 2024 graduation ceremony",
+        "event_dates": "12 June 2025",
+        "status": "Indexed reference only; full original text and gallery are not saved.",
+        "original_post_url": null,
+        "discovery_source_url": "https://nl.linkedin.com/in/konstantinos-prattis-b77829250",
+        "related_links": []
+      },
+      {
+        "id": "imc2025-unrecovered",
+        "title": "IMC 2025 — sponsor and alumnus",
+        "event_dates": "28 July–3 August 2025",
+        "status": "Indexed reference only; full original text and gallery are not saved.",
+        "original_post_url": null,
+        "discovery_source_url": "https://nl.linkedin.com/in/konstantinos-prattis-b77829250",
+        "related_links": [
+          "https://lnkd.in/d_CJSvS3"
+        ]
+      }
+    ]
+  },
+  "blogs": {
+    "feeds": [
+      {
+        "url": "https://jtmaths.blogspot.com/",
+        "feed_entries": 62,
+        "entries_in_index": 62
+      },
+      {
+        "url": "https://mathjt.blogspot.com/",
+        "feed_entries": 13,
+        "entries_in_index": 13
+      }
+    ],
+    "scope": "All 75 entries supplied by the two public feeds are represented. An entry containing only an external embed can still lack its original playable content.",
+    "unrecovered_geogebra_material_ids": [
+      "wN7Ax5qN",
+      "DETcJ6cM",
+      "bqYwPN6R",
+      "tQv4ym7J"
+    ],
+    "geogebra_note": "These historical construction links occur in the feeds and had no locally saved construction at review. See each archive entry for the latest file status. The surviving N7KKv7Xa construction is handled separately.",
+    "slides_note": "Rendered pages from eight SlideShare URLs were recovered separately. Images of slides preserve their appearance; they are not editable source decks.",
+    "third_party_embeds_note": "Third-party video and quotation sources remain credited. User publication of a link does not establish ownership of all external media."
+  },
+  "school_portfolio": {
+    "title": "Kizoa school photo album / portfolio",
+    "source_url": "http://www.kizoa.com/Movie-Video-Slideshow-Maker/d162088822k3281783o1l1/photo-album",
+    "status": "Referenced in the CV; no local album or video copy has been recovered.",
+    "note": "This records a missing backup, not a verified claim that every possible recovery source is unavailable."
+  },
+  "external_recognition": {
+    "policy": "Factual summaries and exact source links are stored for outside press, institutional profiles and award announcements. Complete third-party articles and photographs are not represented as locally archived.",
+    "unretrieved_legacy_announcements": [
+      {
+        "title": "SEEMOUS 2021 bronze medal",
+        "source_url": "https://old.ece.ntua.gr/gr/article/462",
+        "evidence": "CV reference; original announcement not retrieved."
+      },
+      {
+        "title": "3rd Open Mathematical Olympiad 2020 result",
+        "source_url": "https://old.ece.ntua.gr/gr/article/409",
+        "evidence": "CV reference; original announcement not retrieved. A public results PDF lists a gold medal, but does not identify the event date in its visible text."
+      }
+    ]
+  },
+  "media_status": "Local files listed in data/file-manifest.json and each entry's media array are the saved copies. An outbound URL alone is not a backup. Video availability and any later recovery should be read from the latest archive entry and file manifest.",
+  "completion_note": "Further original URLs, account exports or source files could expand this collection. Public search cannot establish that all web content has been found."
+}

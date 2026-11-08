@@ -123,9 +123,12 @@
     }
     .cap{padding:10px 12px; font-size:13px; color:var(--muted); border-top:1px solid var(--border)}
   </style>
+  <link rel="stylesheet" href="assets/archive.css">
+  <script src="assets/site-effects.js" defer></script>
 </head>
 
-<body>
+<body class="home-page">
+  <a class="skip-link" href="#main-content">Skip to content</a>
   <div class="wrap">
     <header class="topbar">
       <div class="brand">
@@ -134,11 +137,13 @@
         </div>
         <div>
           <div style="font-weight:800; letter-spacing:-.2px;">Ioannis Tzachristas</div>
-          <div class="tiny">PhD candidate • TUM • Munich</div>
+          <div class="tiny">Researcher & Lecturer • TUM • Munich</div>
         </div>
       </div>
       <nav class="nav" aria-label="Primary">
         <a class="pill" href="#about">About</a>
+        <a class="pill" href="#projects">Projects</a>
+        <a class="pill" href="archive/">Archive</a>
         <a class="pill" href="#personal">Personal</a>
         <a class="pill" href="#education">Education</a>
         <a class="pill" href="#experience">Experience</a>
@@ -148,12 +153,13 @@
       </nav>
     </header>
 
-    <main>
+    <main id="main-content">
       <section class="hero" id="about">
-        <div class="card">
-          <h1>Ioannis Tzachristas</h1>
+        <div class="card hero-copy">
+          <p class="eyebrow hero-eyebrow">Researcher · Lecturer · PhD candidate</p>
+          <h1><span class="name-first">Ioannis</span> Tzachristas</h1>
           <p class="subtitle">
-            PhD candidate at the Chair of Transportation Systems Engineering (TUM), collaborating with Huawei Munich Research Center.
+            Researcher, lecturer and PhD candidate at the Chair of Transportation Systems Engineering, Technical University of Munich (TUM).
             I work on <b>privilege management for LLM-based AI agents</b> and applications in transportation systems, with broader interests in
             agentic AI, security/formal methods, and discrete mathematics.
           </p>
@@ -165,7 +171,8 @@
             <span class="badge alt">Discrete mathematics</span>
           </div>
 
-          <div class="cta">
+          <div class="hero-actions"><a class="btn hero-primary" href="#projects">Explore my work <span aria-hidden="true">↗</span></a><a class="hero-archive-link" href="archive/">Open the archive <span aria-hidden="true">→</span></a></div>
+          <div class="cta profile-links">
             <a class="btn" href="https://www.mos.ed.tum.de/en/vvs/mitarbeiterinnen/ioannis-tzachristas/" target="_blank" rel="noreferrer">
               TUM academic page
             </a>
@@ -189,8 +196,9 @@
           </div>
         </div>
 
-        <aside class="card">
-          <h2>Now</h2>
+        <figure class="hero-portrait"><img src="assets/img/image1.jpeg" alt="Ioannis Tzachristas at the Munich Research Center annual award ceremony" width="399" height="407" fetchpriority="high"><figcaption><span>Research. Mathematics. Music.</span><span class="portrait-location">Ioannina → Munich</span></figcaption></figure>
+        <aside class="card hero-current">
+          <h2 class="current-heading"><span class="status-dot" aria-hidden="true"></span>Currently</h2>
           <div class="item">
             <div class="top">
               <div class="role">PhD Candidate — TUM</div>
@@ -201,10 +209,10 @@
 
           <div class="item">
             <div class="top">
-              <div class="role">Researcher (Fixed-term PhD Contract) — Huawei Munich Research Center</div>
-              <div class="meta">09/2024 – present</div>
+              <div class="role">Lecturer & Researcher — TUM</div>
+              <div class="meta">09/2026 – present</div>
             </div>
-            <div class="meta">Trustworthy Technology & Engineering Lab • Identity & Access Management</div>
+            <div class="meta">Chair of Transportation Systems Engineering • School of Engineering and Design</div>
           </div>
 
           <div class="item">
@@ -220,8 +228,22 @@
         </aside>
       </section>
 
+      <!-- PROJECTS:start -->
+<section class="card section archive-home-section" id="projects" aria-labelledby="projects-heading">
+<div class="section-heading"><div><p class="eyebrow">01 / Explore & interact</p><h2 id="projects-heading">Projects & experiments.</h2><p class="subtitle">Interactive work in mathematics, language models and human decision-making.</p></div><a class="section-link" href="https://github.com/jtzach" target="_blank" rel="noopener noreferrer">GitHub profile ↗</a></div>
+<div class="project-grid launched-grid"><article class="project-card"><div class="project-topline"><span class="project-kind">Live project</span><span class="project-symbol" aria-hidden="true">◇</span></div><h3>Aristotle Virtue Map</h3><p>Explore seven ethical dilemmas, build a five-virtue profile grounded in Aristotle&#x27;s ethics, and compare it with nine language models.</p><div class="project-actions"><a href="https://jtzach.github.io/Aristotle-Virtue-Map/" target="_blank" rel="noopener noreferrer">Open project ↗</a><a href="https://github.com/jtzach/Aristotle-Virtue-Map" target="_blank" rel="noopener noreferrer">Source code</a></div></article><article class="project-card"><div class="project-topline"><span class="project-kind">Live project</span><span class="project-symbol" aria-hidden="true">∴</span></div><h3>Colourful Combinatorics</h3><p>An interactive mathematics presentation in Greek: discover Ramsey theory, graph colouring and polygon triangulation through hands-on puzzles.</p><div class="project-actions"><a href="https://jtzach.github.io/Colourful-Combinatorics/" target="_blank" rel="noopener noreferrer">Open project ↗</a><a href="https://github.com/jtzach/Colourful-Combinatorics" target="_blank" rel="noopener noreferrer">Source code</a></div></article><article class="project-card"><div class="project-topline"><span class="project-kind">Live project</span><span class="project-symbol" aria-hidden="true">Σ</span></div><h3>IMC 2026 Puzzle Arena</h3><p>Try a fresh round of three Olympiad-style puzzles, with easy, medium and hard questions drawn from a 100-problem pool.</p><div class="project-actions"><a href="https://jtzach.github.io/Puzzle-Arena-IMC-2026/" target="_blank" rel="noopener noreferrer">Open project ↗</a><a href="https://github.com/jtzach/Puzzle-Arena-IMC-2026" target="_blank" rel="noopener noreferrer">Source code</a></div></article><article class="project-card"><div class="project-topline"><span class="project-kind">Live project</span><span class="project-symbol" aria-hidden="true">↗</span></div><h3>VirtueMap Annotation Survey</h3><p>The VirtueMap AI annotation survey for ethical dilemmas.</p><div class="project-actions"><a href="https://jtzach.github.io/virtuemap/" target="_blank" rel="noopener noreferrer">Open project ↗</a><a href="https://github.com/jtzach/virtuemap" target="_blank" rel="noopener noreferrer">Source code</a></div></article></div><details class="entry-detail"><summary>Research code & other projects (7)</summary><div class="project-grid"><article class="project-card"><div class="project-topline"><span class="project-kind">Code & research</span><span class="project-symbol" aria-hidden="true">↗</span></div><h3>ARCADI</h3><p>A reproducible micro-benchmark comparing five LLM-agent defence architectures, including privileged planning, taint tracking and guarded sinks.</p><div class="project-actions"><a href="https://github.com/jtzach/ARCADI" target="_blank" rel="noopener noreferrer">View repository ↗</a></div></article><article class="project-card"><div class="project-topline"><span class="project-kind">Code & research</span><span class="project-symbol" aria-hidden="true">↗</span></div><h3>LLM-based AI Surveys</h3><p>Replication code, persona prompts, evaluation scripts and study data for guided LLM surveys using MiD 2017 mobility data.</p><div class="project-actions"><a href="https://github.com/jtzach/LLM-based-AI-surveys-MiD2017" target="_blank" rel="noopener noreferrer">View repository ↗</a></div></article><article class="project-card"><div class="project-topline"><span class="project-kind">Code & research</span><span class="project-symbol" aria-hidden="true">↗</span></div><h3>MATSim vs GPT-Pro</h3><p>A Munich transport benchmark comparing GPT-Pro predictions with aggregate MATSim outputs, including reproducible data, prompts and evaluation results.</p><div class="project-actions"><a href="https://github.com/jtzach/MATSim-vs-GPT-Pro" target="_blank" rel="noopener noreferrer">View repository ↗</a></div></article><article class="project-card"><div class="project-topline"><span class="project-kind">Code & research</span><span class="project-symbol" aria-hidden="true">↗</span></div><h3>CondRoute</h3><p>The CondRoute benchmark and its supplementary research package.</p><div class="project-actions"><a href="https://github.com/jtzach/CondRoute" target="_blank" rel="noopener noreferrer">View repository ↗</a></div></article><article class="project-card"><div class="project-topline"><span class="project-kind">Code & research</span><span class="project-symbol" aria-hidden="true">↗</span></div><h3>Greek Rhyme Eval</h3><p>Reproducible Greek rhyme classification experiments comparing instructions, theory, examples and symbolic feedback against automatic reference labels.</p><div class="project-actions"><a href="https://github.com/jtzach/greek-rhyme-eval" target="_blank" rel="noopener noreferrer">View repository ↗</a></div></article><article class="project-card"><div class="project-topline"><span class="project-kind">Code & research</span><span class="project-symbol" aria-hidden="true">↗</span></div><h3>Minesweeper</h3><p>Minesweeper project by Ioannis Tzachristas (2022).</p><div class="project-actions"><a href="https://github.com/jtzach/Minesweeper_Tzachristas_Ioannis_2022" target="_blank" rel="noopener noreferrer">View repository ↗</a></div></article><article class="project-card"><div class="project-topline"><span class="project-kind">Code & research</span><span class="project-symbol" aria-hidden="true">↗</span></div><h3>NL2LTL</h3><p>A fork of Lang2LTL for translating natural-language commands into linear temporal logic; upstream work by the h2r/Lang2LTL team.</p><div class="project-actions"><a href="https://github.com/jtzach/NL2LTL" target="_blank" rel="noopener noreferrer">View repository ↗</a></div></article></div></details></section>
+<!-- PROJECTS:end -->
+
+      <!-- ARCHIVE:start -->
+<section class="card section archive-intro archive-home-section" id="archive" aria-labelledby="archive-heading">
+<div class="section-heading"><div><p class="eyebrow">02 / Notes, milestones & discoveries</p><h2 id="archive-heading">The personal archive.</h2><p class="subtitle">Posts, writing, research and moments from across the web, collected here with locally saved files.</p></div><a class="section-link" href="archive/">Explore the archive →</a></div>
+<div class="stat-row"><span><strong>118</strong>Entries collected</span><span><strong>11</strong>LinkedIn posts</span><span><strong>262</strong>Files saved</span></div>
+<div class="archive-preview"><article class="preview-item"><span class="eyebrow">LinkedIn</span><h3><a href="archive/#acl2026">ACL 2026: three papers in San Diego</a></h3><p>17 Aug 2026</p></article><article class="preview-item"><span class="eyebrow">LinkedIn</span><h3><a href="archive/#dimva2026">DIMVA 2026: securing the flows of LLM agents</a></h3><p>21 Jul 2026</p></article><article class="preview-item"><span class="eyebrow">LinkedIn</span><h3><a href="archive/#atrium2026">ATRIUM research visit: mapping the moral behavior of AI</a></h3><p>30 Jun 2026</p></article></div>
+<a class="btn" href="archive/">Browse posts & media →</a><p class="archive-note">Each entry identifies what is saved here and links to its original source. This collection includes publicly retrievable material; coverage and missing media are noted in the archive.</p></section>
+<!-- ARCHIVE:end -->
+
       <section class="card section" id="personal">
-        <h2>Personal information</h2>
+        <p class="eyebrow section-kicker">03 / Personal background</p><h2>Personal information</h2>
         <div class="row" style="margin-top:10px">
           <span class="k">Full name: IOANNIS TZACHRISTAS</span>
           <span class="k">Date of birth: 11.06.2001</span>
@@ -243,7 +265,7 @@
 
       <section class="grid">
         <div class="card section" id="education">
-          <h2>Education</h2>
+          <p class="eyebrow section-kicker">04 / Academic path</p><h2>Education</h2>
 
           <div class="item">
             <div class="top">
@@ -280,12 +302,13 @@
         </div>
 
         <div class="card section" id="experience">
-          <h2>Work experience</h2>
+          <p class="eyebrow section-kicker">05 / Research in practice</p><h2>Work experience</h2>
+          <div class="item"><div class="top"><div class="role">TUM — Lecturer & Researcher</div><div class="meta">09/2026 – present</div></div><ul class="bullets"><li>Chair of Transportation Systems Engineering, School of Engineering and Design</li></ul></div>
 
           <div class="item">
             <div class="top">
               <div class="role">Huawei Munich Research Center — Identity & Access Management</div>
-              <div class="meta">09/2024 – present</div>
+              <div class="meta">09/2024 – 08/2026</div>
             </div>
             <ul class="bullets">
               <li>Fixed-term PhD contract in Trustworthy Technology & Engineering Lab</li>
@@ -328,7 +351,7 @@
 
       <section class="grid">
         <div class="card section" id="research">
-          <h2>Selected publications & research</h2>
+          <p class="eyebrow section-kicker">06 / Selected work</p><h2>Selected publications & research</h2>
 
           <div class="item">
             <div class="top">
@@ -374,8 +397,8 @@
           </div>
         </div>
 
-        <div class="card section">
-          <h2>Skills</h2>
+        <div class="card section skills-panel">
+          <p class="eyebrow section-kicker">Methods & languages</p><h2>Skills</h2>
 
           <div class="item">
             <div class="top">
@@ -415,48 +438,48 @@
       </section>
 
       <section class="card section" id="media">
-        <h2>Media</h2>
+        <p class="eyebrow section-kicker">07 / Beyond the papers</p><h2>Media</h2>
         <p class="subtitle" style="margin-top:0">
           Images included from my CV.
         </p>
 
         <div class="gallery" aria-label="CV images">
-          <figure class="gcard span-6">
-            <img src="assets/img/image1.jpeg" alt="Photo" />
+          <figure class="gcard media-portrait span-6">
+            <img loading="lazy" decoding="async" src="assets/img/image1.jpeg" alt="Photo" />
             <figcaption class="cap">Photo</figcaption>
           </figure>
 
-          <figure class="gcard span-6">
-            <img src="assets/img/image7.jpeg" alt="Sketch portrait" />
+          <figure class="gcard media-portrait span-6">
+            <img loading="lazy" decoding="async" src="assets/img/image7.jpeg" alt="Sketch portrait" />
             <figcaption class="cap">Sketch portrait</figcaption>
           </figure>
 
-          <figure class="gcard span-4">
-            <img src="assets/img/image2.png" alt="TUM logo" />
+          <figure class="gcard media-logo span-4">
+            <img loading="lazy" decoding="async" src="assets/img/image2.png" alt="TUM logo" />
             <figcaption class="cap">TUM</figcaption>
           </figure>
 
-          <figure class="gcard span-4">
-            <img src="assets/img/image4.png" alt="Huawei logo" />
+          <figure class="gcard media-logo span-4">
+            <img loading="lazy" decoding="async" src="assets/img/image4.png" alt="Huawei logo" />
             <figcaption class="cap">Huawei</figcaption>
           </figure>
 
-          <figure class="gcard span-4">
-            <img src="assets/img/image3.png" alt="NTUA emblem" />
+          <figure class="gcard media-logo span-4">
+            <img loading="lazy" decoding="async" src="assets/img/image3.png" alt="NTUA emblem" />
             <figcaption class="cap">NTUA</figcaption>
           </figure>
 
-          <figure class="gcard span-12">
-            <img src="assets/img/image5.png" alt="IMC 2021 certificate" />
+          <figure class="gcard media-certificate span-12">
+            <img loading="lazy" decoding="async" src="assets/img/image5.png" alt="IMC 2021 certificate" />
             <figcaption class="cap">IMC 2021 — First Prize certificate</figcaption>
           </figure>
 
-          <figure class="gcard span-6">
-            <img src="assets/img/image6.png" alt="AKTOR4TheFuture logo" />
+          <figure class="gcard media-logo span-6">
+            <img loading="lazy" decoding="async" src="assets/img/image6.png" alt="AKTOR4TheFuture logo" />
             <figcaption class="cap">AKTOR4TheFuture</figcaption>
           </figure>
 
-          <figure class="gcard span-6">
+          <figure class="gcard media-video span-6">
             <div style="padding:14px">
               <div style="font-weight:700; margin-bottom:6px;">Video</div>
               <div class="subtitle" style="margin:0 0 10px">YouTube link</div>
@@ -467,7 +490,7 @@
       </section>
 
       <section class="card section" id="contact">
-        <h2>Contact</h2>
+        <p class="eyebrow section-kicker">08 / Get in touch</p><h2>Contact</h2>
         <div class="row" style="margin-top:10px">
           <a class="btn" href="mailto:jtzach@gmail.com">jtzach@gmail.com</a>
           <a class="btn secondary" href="mailto:ioannis.tzachristas@huawei.com">ioannis.tzachristas@huawei.com</a>
@@ -485,7 +508,7 @@
 
       <footer class="footer">
         <span>© <span id="y"></span> Ioannis Tzachristas</span>
-        <span class="tiny">GitHub Pages • single-file HTML</span>
+        <span class="tiny">GitHub Pages • Personal website & archive</span>
       </footer>
     </main>
   </div>

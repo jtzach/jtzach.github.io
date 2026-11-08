@@ -1,0 +1,5 @@
+__pycache__/
+*.pyc
+data/download-cache.json
+*.part
+*.ytdl
