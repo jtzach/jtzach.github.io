@@ -2,7 +2,7 @@
 
 [Personal website](https://jtzach.github.io/) · [Archive](https://jtzach.github.io/archive/)
 
-This static GitHub Pages site brings together my profile, projects, writing and research, with locally saved copies of retrievable media. The collection assembled on 8 November 2026 includes 11 LinkedIn posts, all 75 entries exposed by my two public blog feeds, one ATRIUM article, 13 research PDFs, six videos and 10 summaries of recognition and external coverage. The project section links to four live projects and seven code repositories.
+This static GitHub Pages site brings together my profile, projects, writing and research, with locally saved copies of retrievable media. The collection assembled on 8 November 2026 includes 11 LinkedIn posts, all 75 entries exposed by my two public blog feeds, one ATRIUM article, 13 research PDFs, six videos and 10 summaries of recognition and external coverage. The project section links to two live projects and seven code repositories.
 
 This is a public-source collection, not a verified export of every LinkedIn post or every mention on the web. [Known coverage gaps](data/coverage-gaps.json) include additional indexed LinkedIn posts, old embedded resources and the school portfolio. Each [archive entry](data/archive.json) distinguishes saved text, summaries, local media and source-only references.
 

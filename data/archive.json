@@ -12,30 +12,12 @@
       "verified_on": "2026-11-08"
     },
     {
-      "title": "Colourful Combinatorics",
-      "url": "https://jtzach.github.io/Colourful-Combinatorics/",
-      "repository": "https://github.com/jtzach/Colourful-Combinatorics",
-      "description": "An interactive mathematics presentation in Greek: discover Ramsey theory, graph colouring and polygon triangulation through hands-on puzzles.",
-      "live": true,
-      "verification": "HTTP 200; title: Συνδυαστική — Διαδραστική παρουσίαση; GitHub has_pages=true",
-      "verified_on": "2026-11-08"
-    },
-    {
       "title": "IMC 2026 Puzzle Arena",
       "url": "https://jtzach.github.io/Puzzle-Arena-IMC-2026/",
       "repository": "https://github.com/jtzach/Puzzle-Arena-IMC-2026",
       "description": "Try a fresh round of three Olympiad-style puzzles, with easy, medium and hard questions drawn from a 100-problem pool.",
       "live": true,
       "verification": "HTTP 200; title: IMC 2026 Puzzle Arena; GitHub has_pages=true",
-      "verified_on": "2026-11-08"
-    },
-    {
-      "title": "VirtueMap Annotation Survey",
-      "url": "https://jtzach.github.io/virtuemap/",
-      "repository": "https://github.com/jtzach/virtuemap",
-      "description": "The VirtueMap AI annotation survey for ethical dilemmas.",
-      "live": true,
-      "verification": "HTTP 200; title: VirtueMap AI - Annotation Survey; GitHub has_pages=true",
       "verified_on": "2026-11-08"
     },
     {
