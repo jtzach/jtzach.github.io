@@ -1,5 +1,5 @@
 {
-  "created": "2026-11-09",
+  "created": "2026-11-10",
   "files": [
     {
       "path": "assets/archive/article/088fd3a179f60efae5b0.webp",
@@ -1340,6 +1340,31 @@
       "path": "assets/documents/triangle-side-trisection-1.pdf",
       "bytes": 880010,
       "sha256": "2852fca086f6b48606d794b9aa36ea2b3f79e7a56e9007379ec6e76019e4def3"
+    },
+    {
+      "path": "assets/fonts/fraunces-OFL.txt",
+      "bytes": 4391,
+      "sha256": "bdf4c22802eaf804f998195871c6b8938aac2ac14b2d78a8bd66a6f1eced833b"
+    },
+    {
+      "path": "assets/fonts/fraunces.woff2",
+      "bytes": 195012,
+      "sha256": "7dc0dd18aeeae3204d5cc26679b5f41d8be1e622bd3bd39fef574346c99508e8"
+    },
+    {
+      "path": "assets/fonts/inter-OFL.txt",
+      "bytes": 4377,
+      "sha256": "5b9321a4298cfeb6b34354164a1c3afc3db114569984c502b9b35d988fd58c57"
+    },
+    {
+      "path": "assets/fonts/inter.woff2",
+      "bytes": 350460,
+      "sha256": "13b4cddc57045d40b411008e61588c8f81aa0bd72fe884624831a0ff9c4d159a"
+    },
+    {
+      "path": "assets/fonts/SOURCES.json",
+      "bytes": 2606,
+      "sha256": "f11f82c1e354a48eb73ed819abaa498f0a93fce68593833bea5bc4817ef2b54e"
     },
     {
       "path": "assets/img/image1.jpeg",

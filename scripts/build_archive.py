@@ -194,6 +194,20 @@ def render_entry(entry):
 <div class="entry-badges">{"".join(badges)}</div><div class="entry-actions">{actions}</div>{details}{note_html}{license_html}</div></article>'''
 
 
+def project_visual(project):
+    """Decorative, locally rendered illustrations; no charts of measured data."""
+    if project.get("title") == "Aristotle Virtue Map":
+        graphic = '''<svg viewBox="0 0 260 200" aria-hidden="true" focusable="false"><polygon class="diagram-soft" points="130,14 218,78 184,174 76,174 42,78"/><polygon class="diagram-line" points="130,42 191,87 168,153 92,153 69,87" opacity=".35"/><path class="diagram-line" d="M130 108V14M130 108L218 78M130 108L184 174M130 108L76 174M130 108L42 78" opacity=".25"/><polygon class="diagram-line" points="130,14 218,78 184,174 76,174 42,78"/><circle class="diagram-copper" cx="130" cy="14" r="6"/><circle class="diagram-purple" cx="218" cy="78" r="6"/><circle class="diagram-teal" cx="184" cy="174" r="6"/><circle class="diagram-purple" cx="76" cy="174" r="6"/><circle class="diagram-copper" cx="42" cy="78" r="6"/><circle class="diagram-soft" cx="130" cy="108" r="27"/><text x="130" y="118" text-anchor="middle" fill="currentColor" font-family="Georgia,serif" font-size="34">φ</text></svg>'''
+        caption = "Five virtues · Seven dilemmas"
+    elif project.get("title") == "IMC 2026 Puzzle Arena":
+        cells = ''.join(f'<rect x="{70 + x * 30}" y="{24 + y * 30}" width="27" height="27" rx="5" class="diagram-soft"/>' for y in range(4) for x in range(4))
+        graphic = f'''<svg viewBox="0 0 260 200" aria-hidden="true" focusable="false">{cells}<rect x="70" y="24" width="27" height="27" rx="5" class="diagram-copper" opacity=".75"/><rect x="100" y="54" width="27" height="27" rx="5" class="diagram-purple" opacity=".75"/><rect x="130" y="84" width="27" height="27" rx="5" class="diagram-teal" opacity=".75"/><path class="diagram-line" d="M83 37L113 67L143 97L173 127" stroke-dasharray="3 5"/><text x="130" y="184" text-anchor="middle" fill="currentColor" font-family="Georgia,serif" font-size="23">Σ · ∞ · π</text></svg>'''
+        caption = "Three levels · 100 problems"
+    else:
+        return ""
+    return f'<div class="project-illustration" aria-hidden="true">{graphic}<p>{caption}</p></div>'
+
+
 def render_project(project):
     title = e(project.get("title"))
     url = remote_url(project.get("url"))
@@ -203,9 +217,9 @@ def render_project(project):
     actions = f'<a href="{e(url)}" target="_blank" rel="noopener noreferrer">{main_label}</a>' if url else ""
     if repo and repo != url:
         actions += f'<a href="{e(repo)}" target="_blank" rel="noopener noreferrer">Source code</a>'
-    symbols = {"Aristotle Virtue Map": "◇", "Colourful Combinatorics": "∴", "IMC 2026 Puzzle Arena": "Σ", "VirtueMap Annotation Survey": "↗"}
+    symbols = {"Aristotle Virtue Map": "◇", "IMC 2026 Puzzle Arena": "Σ"}
     symbol = symbols.get(str(project.get("title")), "↗")
-    return f'<article class="project-card"><div class="project-topline"><span class="project-kind">{"Live project" if live else "Code & research"}</span><span class="project-symbol" aria-hidden="true">{symbol}</span></div><h3>{title}</h3><p>{e(project.get("description"))}</p><div class="project-actions">{actions}</div></article>'
+    return f'<article class="project-card{" project-featured" if live else ""}"><div class="project-copy"><div class="project-topline"><span class="project-kind">{"Live project" if live else "Code & research"}</span><span class="project-symbol" aria-hidden="true">{symbol}</span></div><h3>{title}</h3><p>{e(project.get("description"))}</p><div class="project-actions">{actions}</div></div>{project_visual(project) if live else ""}</article>'
 
 
 def replace_block(html, name, body, before):
@@ -243,7 +257,7 @@ def update_home(data, entries, media_count):
     launched = [project for project in projects if project.get("live")]
     code = [project for project in projects if not project.get("live")]
     project_html = f'''<section class="card section archive-home-section" id="projects" aria-labelledby="projects-heading">
-<div class="section-heading"><div><p class="eyebrow">01 / Explore & interact</p><h2 id="projects-heading">Projects & experiments.</h2><p class="subtitle">Interactive work in mathematics, language models and human decision-making.</p></div><a class="section-link" href="https://github.com/jtzach" target="_blank" rel="noopener noreferrer">GitHub profile ↗</a></div>
+<div class="section-heading"><div><p class="eyebrow">Projects · 01</p><h2 id="projects-heading">Projects & <span>experiments.</span></h2><p class="subtitle">Interactive work in mathematics, language models and human decision-making.</p></div><a class="section-link" href="https://github.com/jtzach" target="_blank" rel="noopener noreferrer">GitHub profile ↗</a></div>
 <div class="project-grid launched-grid">{"".join(render_project(project) for project in launched)}</div>'''
     if code:
         project_html += f'<details class="entry-detail"><summary>Research code & other projects ({len(code)})</summary><div class="project-grid">{"".join(render_project(project) for project in code)}</div></details>'
@@ -257,7 +271,7 @@ def update_home(data, entries, media_count):
         previews.append(f'<article class="preview-item"><span class="eyebrow">{e(entry.get("category"))}</span><h3><a href="archive/#{e(entry["id"])}">{e(entry.get("title"))}</a></h3><p>{e(date_label(entry.get("date")))}</p></article>')
     linkedin_count = sum(entry.get("category") == "LinkedIn" for entry in entries)
     archive_html = f'''<section class="card section archive-intro archive-home-section" id="archive" aria-labelledby="archive-heading">
-<div class="section-heading"><div><p class="eyebrow">02 / Notes, milestones & discoveries</p><h2 id="archive-heading">The personal archive.</h2><p class="subtitle">Posts, writing, research and moments from across the web, collected here with locally saved files.</p></div><a class="section-link" href="archive/">Explore the archive →</a></div>
+<div class="section-heading"><div><p class="eyebrow">Notes, milestones & discoveries · 02</p><h2 id="archive-heading">The personal <span>archive.</span></h2><p class="subtitle">Posts, writing, research and moments from across the web, collected here with locally saved files.</p></div><a class="section-link" href="archive/">Explore the archive →</a></div>
 <div class="stat-row"><span><strong>{len(entries)}</strong>Entries collected</span><span><strong>{linkedin_count}</strong>LinkedIn posts</span><span><strong>{media_count}</strong>Files saved</span></div>
 <div class="archive-preview">{"".join(previews)}</div>
 <a class="btn" href="archive/">Browse posts & media →</a><p class="archive-note">Each entry identifies what is saved here and links to its original source. This collection includes publicly retrievable material; coverage and missing media are noted in the archive.</p></section>'''
@@ -282,10 +296,10 @@ def build(data_path):
     page = f'''<!doctype html>
 <html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
 <title>Personal archive — Ioannis Tzachristas</title><meta name="description" content="Posts, writing, research and media by Ioannis Tzachristas, preserved with local files and original source references.">
-<meta name="author" content="Ioannis Tzachristas"><link rel="stylesheet" href="../assets/archive.css"><script src="../assets/archive.js" defer></script><script src="../assets/site-effects.js" defer></script></head>
+<meta name="author" content="Ioannis Tzachristas"><script src="../assets/theme.js"></script><link rel="stylesheet" href="../assets/archive.css"><script src="../assets/archive.js" defer></script><script src="../assets/site-effects.js" defer></script></head>
 <body class="archive-page"><a class="skip-link" href="#archive-main">Skip to archive</a>
-<header class="archive-header"><div class="archive-wrap"><a class="archive-home" href="../"><img src="../assets/img/image1.jpeg" alt="">Ioannis Tzachristas</a><nav aria-label="Primary"><a href="../">About</a><a href="../#projects">Projects</a><a href="./" aria-current="page">Archive</a><a href="../#research">Research</a><a href="../#contact">Contact</a></nav></div></header>
-<main class="archive-wrap" id="archive-main"><div class="archive-masthead"><div><p class="eyebrow">A collection, kept close</p><h1>Personal archive.</h1><p class="archive-lead">Ideas, research and moments along the way.<br>Posts and writing from across the web, with saved copies you can read here.</p></div><div><div class="stat-row"><span><strong>{len(entries)}</strong>Entries</span><span><strong>{linkedin_count}</strong>LinkedIn posts</span><span><strong>{media_count}</strong>Local files</span></div><p class="archive-note">Collected through {e(updated)}</p></div></div>
+<header class="archive-header"><div class="archive-wrap"><a class="archive-home" href="../"><img src="../assets/img/image1.jpeg" alt="">Ioannis Tzachristas</a><nav aria-label="Primary"><a href="../">About</a><a href="../#projects">Projects</a><a href="./" aria-current="page">Archive</a><a href="../#research">Research</a><a href="../#contact">Contact</a></nav><button class="theme-toggle" type="button" data-theme-toggle aria-label="Switch to dark mode" aria-pressed="false" title="Switch to dark mode"><span data-theme-icon aria-hidden="true">☾</span></button></div></header>
+<main class="archive-wrap" id="archive-main"><div class="archive-masthead"><div><p class="eyebrow">A collection, kept close</p><h1>Personal <span class="accent-text">archive.</span></h1><p class="archive-lead">Ideas, research and moments along the way.<br>Posts and writing from across the web, with saved copies you can read here.</p></div><div><div class="stat-row"><span><strong>{len(entries)}</strong>Entries</span><span><strong>{linkedin_count}</strong>LinkedIn posts</span><span><strong>{media_count}</strong>Local files</span></div><p class="archive-note">Collected through {e(updated)}</p></div></div>
 <aside class="coverage-notice" aria-label="Archive coverage"><strong>What is preserved?</strong> {e(coverage)} Text and media marked as saved are stored with this website. Original-source links open the external publication.</aside>
 <div class="archive-controls js-only" role="search" aria-label="Search archive"><div class="search-field"><label for="archive-search">Search posts, titles & saved text</label><input id="archive-search" type="search" placeholder="Try mathematics, piano, TUM…" autocomplete="off"></div><div class="filter-field"><label for="archive-category">Collection</label><select id="archive-category"><option value="">All collections</option>{options}</select></div><button type="button" id="clear-filters">Clear</button></div>
 <noscript><p>All entries and saved content are available below. Enable JavaScript to search and filter the collection.</p></noscript>

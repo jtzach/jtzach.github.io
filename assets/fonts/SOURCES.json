@@ -1,0 +1,80 @@
+{
+  "fonts": [
+    {
+      "family": "Fraunces",
+      "file": "fraunces.woff2",
+      "format": "woff2",
+      "style": "normal",
+      "axes": [
+        {
+          "tag": "opsz",
+          "min": 9.0,
+          "default": 9.0,
+          "max": 144.0
+        },
+        {
+          "tag": "wght",
+          "min": 100.0,
+          "default": 900.0,
+          "max": 900.0
+        },
+        {
+          "tag": "SOFT",
+          "min": 0.0,
+          "default": 0.0,
+          "max": 100.0
+        },
+        {
+          "tag": "WONK",
+          "min": 0.0,
+          "default": 1.0,
+          "max": 1.0
+        }
+      ],
+      "glyphs": 698,
+      "mapped_codepoints": 624,
+      "bytes": 195012,
+      "sha256": "7dc0dd18aeeae3204d5cc26679b5f41d8be1e622bd3bd39fef574346c99508e8",
+      "source_url": "https://github.com/google/fonts/blob/main/ofl/fraunces/Fraunces%5BSOFT%2CWONK%2Copsz%2Cwght%5D.ttf",
+      "source_git_blob_sha": "8210f9488d3c732359a9292dd09aca3f2bae830e",
+      "source_ttf_bytes": 360440,
+      "license_file": "fraunces-OFL.txt",
+      "license_source_url": "https://github.com/google/fonts/blob/main/ofl/fraunces/OFL.txt",
+      "retrieved": "2026-11-10",
+      "conversion": "Full variable TTF compressed to WOFF2 using fontTools; no glyph or weight subsetting. Glyph order, Unicode cmap and variation axes verified unchanged.",
+      "greek_basic_covered": false
+    },
+    {
+      "family": "Inter",
+      "file": "inter.woff2",
+      "format": "woff2",
+      "style": "normal",
+      "axes": [
+        {
+          "tag": "opsz",
+          "min": 14.0,
+          "default": 14.0,
+          "max": 32.0
+        },
+        {
+          "tag": "wght",
+          "min": 100.0,
+          "default": 400.0,
+          "max": 900.0
+        }
+      ],
+      "glyphs": 2933,
+      "mapped_codepoints": 2849,
+      "bytes": 350460,
+      "sha256": "13b4cddc57045d40b411008e61588c8f81aa0bd72fe884624831a0ff9c4d159a",
+      "source_url": "https://github.com/google/fonts/blob/main/ofl/inter/Inter%5Bopsz%2Cwght%5D.ttf",
+      "source_git_blob_sha": "047c92f6e2212473dc436020afed689527076d44",
+      "source_ttf_bytes": 876576,
+      "license_file": "inter-OFL.txt",
+      "license_source_url": "https://github.com/google/fonts/blob/main/ofl/inter/OFL.txt",
+      "retrieved": "2026-11-10",
+      "conversion": "Full variable TTF compressed to WOFF2 using fontTools; no glyph or weight subsetting. Glyph order, Unicode cmap and variation axes verified unchanged.",
+      "greek_basic_covered": true
+    }
+  ]
+}

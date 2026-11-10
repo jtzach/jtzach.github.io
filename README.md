@@ -25,6 +25,8 @@ Python 3 is sufficient; the site has no build dependencies.
 
 The generator rebuilds `archive/index.html` and the marked project/archive sections of `index.html`; edit other homepage sections directly. It does not fetch new posts or media. There is no scheduled automatic synchronization.
 
+The visual design uses locally hosted Inter and Fraunces fonts, with licenses and provenance under `assets/fonts/`. Shared styles live in `assets/archive.css`. `assets/theme.js` applies the saved light/dark preference before rendering, and `assets/site-effects.js` provides the theme control, scroll reveals and decorative background. Motion respects the visitor's reduced-motion setting.
+
 ## Preservation and attribution
 
 Files referenced locally remain available with the repository even if their original hosts disappear. The six saved YouTube videos are 360p or 720p delivery copies with audio, not original camera or master files. SlideShare slides are saved as rendered images, not editable presentation decks. A recovered GeoGebra construction is stored as a `.ggb` file. Some unavailable embeds remain source links with coverage notes.
